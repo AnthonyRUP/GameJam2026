@@ -32,12 +32,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
+        _actions ??= new InputSystem_Actions();
         _actions.Player.Enable();
     }
 
     private void OnDisable()
     {
-        _actions.Player.Disable();
+        _actions?.Player.Disable();
     }
 
     private void OnDestroy()

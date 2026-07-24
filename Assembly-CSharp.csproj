@@ -52,10 +52,22 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.5.4f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Data/CountdownCodex.cs" />
+    <Compile Include="Assets/Scripts/Placeholder/ColorPalette.cs" />
+    <Compile Include="Assets/Scripts/UI/Common/MatchableItemView.cs" />
+    <Compile Include="Assets/Scripts/Placeholder/ShapeSpriteLibrary.cs" />
+    <Compile Include="Assets/Scripts/Data/SymptomVisualCatalog.cs" />
     <Compile Include="Assets/Scripts/Player/CameraFollow.cs" />
+    <Compile Include="Assets/Scripts/Core/GameEvents.cs" />
+    <Compile Include="Assets/Scripts/Data/CodexLoader.cs" />
+    <Compile Include="Assets/Scripts/Placeholder/SizeScaleTable.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
     <Compile Include="Assets/InputSystem_Actions.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/Runtime/GameState.cs" />
+    <Compile Include="Assets/Scripts/Placeholder/ProceduralShapeFactory.cs" />
+    <Compile Include="Assets/Scripts/Core/GameManager.cs" />
+    <Compile Include="Assets/Scripts/UI/BloodTest/BloodGlyphView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
