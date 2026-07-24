@@ -1,0 +1,179 @@
+{
+  "diseases": [
+    {
+      "id": "crimson_fever", "name": "Crimson Fever", "tier": "A",
+      "symptoms": ["fever", "rash", "rapid_pulse"],
+      "color": "crimson", "size": "small", "shape": "triangle",
+      "reagents_required": ["crimson", "small", "triangle"]
+    },
+    {
+      "id": "marsh_ague", "name": "Marsh Ague", "tier": "A",
+      "symptoms": ["fever", "chills", "nausea"],
+      "color": "amber", "size": "large", "shape": "diamond",
+      "reagents_required": ["amber", "large", "diamond"]
+    },
+    {
+      "id": "iron_cough", "name": "Iron Cough", "tier": "A",
+      "symptoms": ["cough", "rapid_pulse", "pale_skin"],
+      "color": "jade", "size": "medium", "shape": "circle",
+      "reagents_required": ["jade", "medium", "circle"]
+    },
+    {
+      "id": "static_shock", "name": "Static Shock", "tier": "A",
+      "symptoms": ["tremor", "nausea", "chills"],
+      "color": "violet", "size": "large", "shape": "square",
+      "reagents_required": ["violet", "large", "square"]
+    },
+    {
+      "id": "nerve_static", "name": "Nerve Static", "tier": "B",
+      "symptoms": ["tremor", "bloodshot_eyes", "rapid_pulse"],
+      "color": "violet", "size": "small", "shape": "circle",
+      "reagents_required": ["violet", "small", "circle"]
+    },
+    {
+      "id": "glass_bone_syndrome", "name": "Glass Bone Syndrome", "tier": "B",
+      "symptoms": ["tremor", "bloodshot_eyes", "swelling"],
+      "color": "azure", "size": "medium", "shape": "diamond",
+      "reagents_required": ["azure", "medium", "diamond"]
+    },
+    {
+      "id": "blue_lung_rot", "name": "Blue Lung Rot", "tier": "B",
+      "symptoms": ["cough", "rash", "chills"],
+      "color": "jade", "size": "small", "shape": "circle",
+      "reagents_required": ["jade", "small", "circle"]
+    },
+    {
+      "id": "choke_vine", "name": "Choke Vine", "tier": "B",
+      "symptoms": ["cough", "rash", "swelling"],
+      "color": "amber", "size": "large", "shape": "triangle",
+      "reagents_required": ["amber", "large", "triangle"]
+    },
+    {
+      "id": "sable_pox", "name": "Sable Pox", "tier": "B",
+      "symptoms": ["nausea", "bloodshot_eyes", "chills"],
+      "color": "crimson", "size": "medium", "shape": "diamond",
+      "reagents_required": ["crimson", "medium", "diamond"]
+    },
+    {
+      "id": "weeping_root", "name": "Weeping Root", "tier": "B",
+      "symptoms": ["nausea", "bloodshot_eyes", "swelling"],
+      "color": "violet", "size": "large", "shape": "triangle",
+      "reagents_required": ["violet", "large", "triangle"]
+    },
+    {
+      "id": "ashen_wither", "name": "Ashen Wither", "tier": "C",
+      "symptoms": ["fever", "tremor", "pale_skin"],
+      "color": "crimson", "size": "small", "shape": "square",
+      "reagents_required": ["crimson", "small", "square"]
+    },
+    {
+      "id": "hollow_marrow", "name": "Hollow Marrow", "tier": "C",
+      "symptoms": ["fever", "tremor", "pale_skin"],
+      "color": "jade", "size": "small", "shape": "square",
+      "reagents_required": ["jade", "small", "square"]
+    },
+    {
+      "id": "frost_bloom", "name": "Frost Bloom", "tier": "C",
+      "symptoms": ["chills", "swelling", "pale_skin"],
+      "color": "amber", "size": "medium", "shape": "triangle",
+      "reagents_required": ["amber", "medium", "triangle"]
+    },
+    {
+      "id": "iron_veil", "name": "Iron Veil", "tier": "C",
+      "symptoms": ["chills", "swelling", "pale_skin"],
+      "color": "azure", "size": "medium", "shape": "triangle",
+      "reagents_required": ["azure", "medium", "triangle"]
+    }
+  ],
+
+  "symptom_pool": [
+    "fever", "chills", "rash", "swelling", "cough",
+    "tremor", "bloodshot_eyes", "rapid_pulse", "nausea", "pale_skin"
+  ],
+
+  "symptom_visuals": {
+    "fever": { "technique": "instrument_readout", "asset": "temp_monitor_high" },
+    "chills": { "technique": "instrument_readout", "asset": "temp_monitor_low" },
+    "rapid_pulse": { "technique": "instrument_readout", "asset": "heart_monitor_spike" },
+    "rash": { "technique": "sprite_overlay", "asset": "overlay_rash" },
+    "swelling": { "technique": "sprite_overlay", "asset": "overlay_swelling" },
+    "bloodshot_eyes": { "technique": "sprite_overlay", "asset": "overlay_eyes" },
+    "pale_skin": { "technique": "sprite_overlay", "asset": "overlay_pale_skin" },
+    "cough": { "technique": "discrete_event", "asset": "event_cough_fog" },
+    "tremor": { "technique": "sprite_jitter", "asset": null },
+    "nausea": { "technique": "icon_ticker", "asset": "icon_nausea" }
+  },
+
+  "reagent_shelf": {
+    "colors": { "used": ["crimson", "amber", "azure", "violet", "jade"], "decoys": ["ash"] },
+    "sizes": { "used": ["small", "medium", "large"], "decoys": ["tiny"] },
+    "shapes": { "used": ["triangle", "square", "circle", "diamond"], "decoys": ["star"] }
+  },
+
+  "mechanics": {
+    "session_type": "single_patient",
+    "health_start": 100,
+    "base_decay_per_second": 1.3,
+
+    "attribute_roles": {
+      "color": {
+        "source": "symptom_diagnosis_only",
+        "note": "Color is NEVER revealed by the blood test. It's a static field in the book entry for each disease, only meaningfully known once the disease has been correctly diagnosed from symptoms. This replaces shape's old role."
+      },
+      "size": { "source": "blood_test", "values": ["small", "medium", "large"] },
+      "shape": { "source": "blood_test", "values": ["triangle", "square", "circle", "diamond"] }
+    },
+
+    "symptom_order_note": "The `symptoms` array order per disease IS the reveal order: index 0 = T1 (early), index 1 = T2 (mid), index 2 = T3 (late/risky).",
+    "symptom_reveal_health_thresholds": { "T1": 95, "T2": 60, "T3": 20 },
+
+    "blood_test": {
+      "presentation": "one_attribute_per_draw_visual_glyph",
+      "testable_attributes": ["size", "shape"],
+      "draws_needed_for_full_blood_certainty": 2,
+      "note": "Two separate draws. Each draw, the player chooses which attribute to test: size or shape. The result is shown as a visual glyph (not a plain text label) where ONLY the tested attribute is accurate - e.g. testing 'shape' renders the true shape at a neutral/placeholder size, testing 'size' renders the true size with a neutral/placeholder shape. This isolates exactly one variable per draw (so it's a genuine choice with real information value) while still requiring the player to visually read an image rather than a labeled stat. Color is never testable via blood at all - it's the diagnosis-only attribute, known only once the disease is correctly identified from symptoms.",
+      "cost_seconds_per_draw": 9
+    },
+
+    "synthesis": {
+      "fails_silently": true,
+      "note": "Mixing always produces a compound regardless of correctness. No feedback at this stage."
+    },
+
+    "administer": {
+      "resolution": "deterministic_match_count",
+      "note": "Outcome is NOT random. Compare the administered (color,size,shape) compound against the TRUE disease's actual signature and count matching attributes (0-3).",
+      "outcomes": {
+        "3": { "result": "cure", "effect": "win" },
+        "2": { "result": "improves", "effect": "health_bonus", "amount": 15 },
+        "1": { "result": "no_effect", "effect": "none" },
+        "0": { "result": "worsens", "effect": "health_penalty", "amount": 20 }
+      },
+      "feedback": {
+        "type": "scoped_candidate_reveal",
+        "note": "After a non-cure outcome, filter the player's CURRENT shortlist (whatever remains plausible given symptoms + blood evidence observed so far, NOT the full 14-disease codex) down to diseases that would produce this exact same outcome category against this exact administered compound. Show that filtered list to the player as an updated set of suspects. Scoping to the current shortlist (rather than the full codex) avoids re-introducing unrelated diseases that coincidentally share the same raw match-count but were already ruled out by symptoms."
+      }
+    }
+  },
+
+  "design_notes": {
+    "tiers": {
+      "A_easy": {
+        "ids": ["crimson_fever", "marsh_ague", "iron_cough", "static_shock"],
+        "note": "Each has a unique first-two-symptoms pair AND a unique (size,shape) combo not shared by any other disease. Resolves quickly and safely, usually by T2 alone."
+      },
+      "B_moderate": {
+        "ids": ["nerve_static", "glass_bone_syndrome", "blue_lung_rot", "choke_vine", "sable_pox", "weeping_root"],
+        "note": "3 symptom-twin pairs (share T1+T2 exactly). Each disease's (size,shape) is shared with a DIFFERENT disease that has completely different early symptoms - so 2 symptoms + 1 blood draw (revealing size+shape together) always narrows to exactly 1, without ever needing the risky T3 symptom. Verified programmatically for all 6.",
+        "symptom_twin_pairs": [["nerve_static","glass_bone_syndrome"], ["blue_lung_rot","choke_vine"], ["sable_pox","weeping_root"]],
+        "blood_twin_pairs_size_shape": [["nerve_static","blue_lung_rot"], ["glass_bone_syndrome","sable_pox"], ["choke_vine","weeping_root"]]
+      },
+      "C_irreducible": {
+        "ids": ["ashen_wither", "hollow_marrow", "frost_bloom", "iron_veil"],
+        "note": "2 pairs, each sharing ALL 3 symptoms AND identical (size,shape) - differ ONLY in color. T3 gives zero extra information here (all 3 symptoms are shared), and blood gives zero extra information (size+shape identical) - genuinely irreducible via testing alone. Resolving requires one administer attempt; the deterministic outcome (2/3 match = 'improves', not a random roll) reveals within the 2-candidate shortlist which one is correct, enabling a certain second attempt.",
+        "pairs": [["ashen_wither","hollow_marrow"], ["frost_bloom","iron_veil"]]
+      }
+    },
+    "design_intent": "Earlier versions of this codex (6 diseases) guaranteed every case resolved to exactly 1 candidate via the same fixed procedure, which made the game deterministic and repetitive after one playthrough. Expanding to 14 diseases across three tiers reintroduces genuine variety: which tier you draw is random each playthrough, so sometimes the case is quick and safe (Tier A), sometimes it needs both systems combined (Tier B), and sometimes it's genuinely irreducible and requires a calculated administer guess (Tier C) - turning the risk mechanic into a real diagnostic tool rather than a rare punishment."
+  }
+}
