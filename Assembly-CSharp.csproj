@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Data/CountdownCodex.cs" />
+    <Compile Include="Assets/Scripts/Core/HealthController.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ColorPalette.cs" />
     <Compile Include="Assets/Scripts/UI/Common/MatchableItemView.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ShapeSpriteLibrary.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Assets/Scripts/Runtime/GameState.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ProceduralShapeFactory.cs" />
     <Compile Include="Assets/Scripts/Core/GameManager.cs" />
+    <Compile Include="Assets/Scripts/World/MonitorDisplay.cs" />
     <Compile Include="Assets/Scripts/UI/BloodTest/BloodGlyphView.cs" />
   </ItemGroup>
   <ItemGroup>
