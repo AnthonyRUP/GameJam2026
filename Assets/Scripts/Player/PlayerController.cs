@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+
+    private static readonly int SpeedParam = Animator.StringToHash("Speed");
 
     private InputSystem_Actions _actions;
     private Rigidbody2D _rb;
@@ -21,6 +24,8 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
 
         _actions = new InputSystem_Actions();
     }
@@ -50,6 +55,9 @@ public class PlayerController : MonoBehaviour
 
         if (spriteRenderer != null && Mathf.Abs(_moveInput.x) > 0.01f)
             spriteRenderer.flipX = _moveInput.x < 0f;
+
+        if (animator != null)
+            animator.SetFloat(SpeedParam, _moveInput.sqrMagnitude);
     }
 
     private void FixedUpdate()
