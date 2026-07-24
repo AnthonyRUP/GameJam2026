@@ -4,7 +4,7 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Build]/
-/[Builds]/
+/[Builds]/**/*
 /[Logs]/
 /[UserSettings]/
 /[MemoryCaptures]/

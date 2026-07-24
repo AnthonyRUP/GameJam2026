@@ -31,6 +31,16 @@ namespace Countdown.Core
             Instance = this;
         }
 
+        private void OnEnable()
+        {
+            GameEvents.OnSymptomRevealed += RecomputeShortlist;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnSymptomRevealed -= RecomputeShortlist;
+        }
+
         private void Start()
         {
             StartCoroutine(CodexLoader.Load(OnCodexLoaded));
@@ -51,9 +61,57 @@ namespace Countdown.Core
                 CurrentDisease = disease,
                 Health = Codex.mechanics.health_start
             };
-            State.Shortlist = new List<DiseaseData>(Codex.diseases);
+            RecomputeShortlist();
             CurrentPhase = GamePhase.Boot;
             Debug.Log($"New playthrough started. Disease: {disease.id} (tier {disease.tier}).");
+        }
+
+        public void RecomputeShortlist()
+        {
+            if (State == null || Codex == null)
+                return;
+            State.Shortlist = ShortlistCalculator.Compute(State, Codex);
+            GameEvents.RaiseShortlistChanged();
+        }
+
+        // Called by the (not-yet-built) Blood Test panel once a draw resolves.
+        public void RecordBloodDraw(string attribute, string revealedValue)
+        {
+            State.BloodDraws.Add(new BloodDrawResult { Attribute = attribute, RevealedValue = revealedValue });
+            RecomputeShortlist();
+        }
+
+        // Called by the (not-yet-built) Administer panel when the player injects a compound.
+        // Returns the resolved outcome category so the caller can drive its own UI feedback.
+        public string RecordAdministerAttempt(Compound compound)
+        {
+            var administeredDisease = AdministerRules.FindDiseaseForCompound(compound, Codex);
+            string outcome = AdministerRules.OutcomeFor(State.CurrentDisease, administeredDisease);
+
+            State.AdministerHistory.Add(new AdministerAttempt
+            {
+                Compound = compound,
+                OutcomeCategory = outcome
+            });
+
+            State.Health = Mathf.Clamp(State.Health + AdministerRules.HealthDeltaFor(outcome), 0f, Codex.mechanics.health_start);
+            RecomputeShortlist();
+
+            if (outcome == AdministerRules.Cure)
+            {
+                State.HasWon = true;
+                State.IsGameOver = true;
+                GameEvents.RaiseGameWon();
+                OpenPanel(GamePhase.GameOverWin);
+            }
+            else if (State.Health <= 0f)
+            {
+                State.IsGameOver = true;
+                GameEvents.RaiseGameOver();
+                OpenPanel(GamePhase.GameOverLose);
+            }
+
+            return outcome;
         }
 
         // Opens a station panel as a modal overlay. Panel show/hide wiring itself is added

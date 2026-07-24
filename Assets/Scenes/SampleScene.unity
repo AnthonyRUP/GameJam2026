@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 409465350}
   - component: {fileID: 409465353}
   - component: {fileID: 409465354}
+  - component: {fileID: 409465355}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -372,7 +373,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 146
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5c070731f6f1a46399fd6a0bdea0767d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -431,6 +432,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &409465355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409465349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +661,7 @@ GameObject:
   - component: {fileID: 760059655}
   - component: {fileID: 760059656}
   - component: {fileID: 760059657}
+  - component: {fileID: 760059658}
   m_Layer: 0
   m_Name: Monitor
   m_TagString: Untagged
@@ -718,7 +732,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 85
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 368c6ec9b1de54b0691b77c17d398a1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -790,6 +804,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.MonitorDisplay
   readout: {fileID: 1961259751}
+--- !u!114 &760059658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760059653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &769193902
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +829,7 @@ GameObject:
   - component: {fileID: 769193905}
   - component: {fileID: 769193904}
   - component: {fileID: 769193907}
+  - component: {fileID: 769193908}
   m_Layer: 0
   m_Name: ShelfRight
   m_TagString: Untagged
@@ -819,7 +846,7 @@ Transform:
   m_GameObject: {fileID: 769193902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.06, y: 0.97, z: 0}
+  m_LocalPosition: {x: 15.06, y: 0.878, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -932,7 +959,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 82
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: f5ecbeba5119d48fd89c65796a178505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -991,6 +1018,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3125, y: 1.7920601}
   m_EdgeRadius: 0
+--- !u!114 &769193908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769193902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,6 +1139,7 @@ GameObject:
   - component: {fileID: 1091010559}
   - component: {fileID: 1091010558}
   - component: {fileID: 1091010563}
+  - component: {fileID: 1091010564}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1156,8 +1196,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.35
+  m_Offset: {x: 0.038255572, y: -0.07332343}
+  m_Radius: 0.16190946
 --- !u!50 &1091010560
 Rigidbody2D:
   serializedVersion: 5
@@ -1232,7 +1272,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 119
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4248014456960098789, guid: fb234af858bd848c2a913bcee4141410, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1282,6 +1322,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1091010564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091010557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &1116444228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2699,8 @@ GameObject:
   - component: {fileID: 1307647927}
   - component: {fileID: 1307647926}
   - component: {fileID: 1307647929}
+  - component: {fileID: 1307647930}
+  - component: {fileID: 1307647931}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -2663,7 +2717,7 @@ Transform:
   m_GameObject: {fileID: 1307647924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.05, y: 1.04, z: 0}
+  m_LocalPosition: {x: 2.05, y: 0.906, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2721,13 +2775,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 4}
+    oldSize: {x: 1, y: 2.3125}
     newSize: {x: 2, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.99470806, y: 2.541746}
+  m_Size: {x: 1, y: 2.3125}
   m_EdgeRadius: 0
 --- !u!212 &1307647928
 SpriteRenderer:
@@ -2776,9 +2830,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 82
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a939c0314a6e94750b77c686ab8ee76a, type: 3}
+  m_Sprite: {fileID: 6326015008650218294, guid: c39063cca94994de1b394a7f4b9bdf72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2823,18 +2877,52 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00000011920929, y: 0.013209581}
+  m_Offset: {x: -0.00000011920929, y: 0.15517339}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 4}
+    oldSize: {x: 1, y: 2.3125}
     newSize: {x: 2, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0128739, y: 2.0970364}
+  m_Size: {x: 1, y: 2.0285723}
   m_EdgeRadius: 0
+--- !u!114 &1307647930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307647924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
+--- !u!95 &1307647931
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307647924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b63a1b9c7aa3f4b54acaa5cec86423f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1320014507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,6 +2935,7 @@ GameObject:
   - component: {fileID: 1320014511}
   - component: {fileID: 1320014510}
   - component: {fileID: 1320014509}
+  - component: {fileID: 1320014512}
   m_Layer: 0
   m_Name: Book
   m_TagString: Untagged
@@ -2976,7 +3065,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 144
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 235b1d43a3c2b4aaaba71d63d7e54969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2989,6 +3078,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1320014512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320014507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &1379294530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3103,7 @@ GameObject:
   - component: {fileID: 1379294533}
   - component: {fileID: 1379294532}
   - component: {fileID: 1379294535}
+  - component: {fileID: 1379294536}
   m_Layer: 0
   m_Name: ShelfLeft
   m_TagString: Untagged
@@ -3018,7 +3120,7 @@ Transform:
   m_GameObject: {fileID: 1379294530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.95, y: 0.97, z: 0}
+  m_LocalPosition: {x: 10.95, y: 0.887, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3131,7 +3233,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 82
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: f5ecbeba5119d48fd89c65796a178505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3190,6 +3292,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3125, y: 1.7359799}
   m_EdgeRadius: 0
+--- !u!114 &1379294536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379294530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &1586730732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3317,7 @@ GameObject:
   - component: {fileID: 1586730735}
   - component: {fileID: 1586730734}
   - component: {fileID: 1586730737}
+  - component: {fileID: 1586730738}
   m_Layer: 0
   m_Name: BloodResearchStation
   m_TagString: Untagged
@@ -3332,7 +3447,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 80
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 3863a0d2963fb4685bcebb4e22a77734, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3391,6 +3506,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 2.022434}
   m_EdgeRadius: 0
+--- !u!114 &1586730738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586730732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &1610450572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,6 +3531,7 @@ GameObject:
   - component: {fileID: 1610450575}
   - component: {fileID: 1610450574}
   - component: {fileID: 1610450577}
+  - component: {fileID: 1610450578}
   m_Layer: 0
   m_Name: Mixer
   m_TagString: Untagged
@@ -3420,7 +3548,7 @@ Transform:
   m_GameObject: {fileID: 1610450572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.23, y: 0.734, z: 0}
+  m_LocalPosition: {x: 13.23, y: 0.634, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3533,7 +3661,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 87
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6084208147512446398, guid: dacf83fa6c56f4e31a521b06e31433b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3592,6 +3720,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4111557, y: 1.6915578}
   m_EdgeRadius: 0
+--- !u!114 &1610450578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610450572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1 &1961259749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4750,7 @@ GameObject:
   - component: {fileID: 2114662178}
   - component: {fileID: 2114662177}
   - component: {fileID: 2114662180}
+  - component: {fileID: 2114662181}
   m_Layer: 0
   m_Name: Injector
   m_TagString: Untagged
@@ -4626,7 +4767,7 @@ Transform:
   m_GameObject: {fileID: 2114662175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 0.79, z: 0}
+  m_LocalPosition: {x: 3.02, y: 0.765, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4739,7 +4880,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 85
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2782473502160666953, guid: 977b3e06eba264b2e991c12c705e484e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4798,6 +4939,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4952197, y: 1.7644358}
   m_EdgeRadius: 0
+--- !u!114 &2114662181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114662175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01d6f0f849e74ccb96b502c48246579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Countdown.World.YSortSpriteRenderer
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

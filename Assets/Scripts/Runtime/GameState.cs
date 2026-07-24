@@ -19,7 +19,6 @@ namespace Countdown.Runtime
     public struct AdministerAttempt
     {
         public Compound Compound;
-        public int MatchCount;
         public string OutcomeCategory; // "cure" | "improves" | "no_effect" | "worsens"
     }
 
