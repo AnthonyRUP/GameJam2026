@@ -13,7 +13,7 @@ namespace Countdown.World
         [SerializeField] private GamePhase phaseToOpen;
         [SerializeField] private GameObject promptRoot; // shown when player is in range, optional
 
-        private bool _playerInRange;
+        protected bool _playerInRange;
 
         private void Reset()
         {
@@ -42,7 +42,9 @@ namespace Countdown.World
                 Interact();
         }
 
-        public void Interact()
+        public void Interact() => OnInteract();
+
+        protected virtual void OnInteract()
         {
             if (GameManager.Instance != null)
                 GameManager.Instance.OpenPanel(phaseToOpen);
