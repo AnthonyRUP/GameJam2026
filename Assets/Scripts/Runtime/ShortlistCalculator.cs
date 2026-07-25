@@ -37,7 +37,7 @@ namespace Countdown.Runtime
         {
             foreach (var draw in state.BloodDraws)
             {
-                string value = draw.Attribute == "size" ? d.size : d.shape;
+                string value = draw.Attribute == "concentration" ? d.concentration : d.shape;
                 if (value != draw.RevealedValue)
                     return false;
             }

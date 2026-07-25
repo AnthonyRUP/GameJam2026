@@ -17,6 +17,41 @@ namespace Countdown.Placeholder
     // sprites in later via ShapeSpriteLibrary's realOverrides slots - no code changes needed.
     public static class ProceduralShapeFactory
     {
+        private static Sprite _petriDishRim;
+
+        // A solid ring - the petri dish's rim, behind the scattered cell dots in a
+        // concentration reading. Distinct from NeutralUnknown's dashed ring so the two
+        // never read as the same kind of "unknown" marker.
+        public static Sprite PetriDishRim => _petriDishRim ??= CreatePetriDishRim();
+
+        private static Sprite CreatePetriDishRim(int px = 64)
+        {
+            var tex = new Texture2D(px, px, TextureFormat.RGBA32, false)
+            {
+                filterMode = FilterMode.Point,
+                wrapMode = TextureWrapMode.Clamp
+            };
+
+            var pixels = new Color32[px * px];
+            const float margin = 0.06f;
+            const float thickness = 0.07f;
+            for (int y = 0; y < px; y++)
+            {
+                for (int x = 0; x < px; x++)
+                {
+                    float fx = (x + 0.5f) / px - 0.5f;
+                    float fy = (1f - (y + 0.5f) / px) - 0.5f;
+                    float dist = Mathf.Sqrt(fx * fx + fy * fy);
+                    bool inRing = dist <= 0.5f - margin && dist >= 0.5f - margin - thickness;
+                    pixels[y * px + x] = inRing ? new Color32(220, 230, 235, 200) : new Color32(0, 0, 0, 0);
+                }
+            }
+            tex.SetPixels32(pixels);
+            tex.Apply();
+
+            return Sprite.Create(tex, new Rect(0, 0, px, px), new Vector2(0.5f, 0.5f), px);
+        }
+
         public static Sprite Create(ShapeKind kind, int px = 64)
         {
             var tex = new Texture2D(px, px, TextureFormat.RGBA32, false)

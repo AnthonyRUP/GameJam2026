@@ -5,14 +5,14 @@ namespace Countdown.Runtime
 {
     public struct BloodDrawResult
     {
-        public string Attribute; // "size" | "shape"
+        public string Attribute; // "concentration" | "shape"
         public string RevealedValue;
     }
 
     public struct Compound
     {
         public string Color;
-        public string Size;
+        public string Concentration;
         public string Shape;
     }
 

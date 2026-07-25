@@ -54,7 +54,7 @@ namespace Countdown.Player
 
             iconRenderer.sprite = ShapeSpriteLibrary.Instance.Get(ShapeKind.Circle);
             iconRenderer.color = BloodSampleColor;
-            iconRenderer.transform.localScale = Vector3.one * (IconBaseScale * SizeScaleTable.NeutralScale);
+            iconRenderer.transform.localScale = Vector3.one * IconBaseScale;
             iconRenderer.enabled = true;
             return true;
         }
@@ -71,7 +71,7 @@ namespace Countdown.Player
 
             iconRenderer.sprite = ShapeSpriteLibrary.Instance.Get(ShapeSpriteLibrary.FromName(compound.Shape));
             iconRenderer.color = ColorPalette.Get(compound.Color);
-            iconRenderer.transform.localScale = Vector3.one * (IconBaseScale * SizeScaleTable.Scale(compound.Size));
+            iconRenderer.transform.localScale = Vector3.one * IconBaseScale;
             iconRenderer.enabled = true;
             return true;
         }

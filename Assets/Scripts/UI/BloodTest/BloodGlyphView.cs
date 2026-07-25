@@ -4,30 +4,38 @@ using UnityEngine.UI;
 
 namespace Countdown.UI.BloodTest
 {
-    // Renders one blood draw's result: only the tested attribute is accurate, the other
-    // is a fixed neutral placeholder - isolating exactly one variable per draw so the
-    // choice of what to test carries real weight.
+    // Renders one blood draw's result: only the tested attribute is accurate, the
+    // other isn't shown at all - isolating exactly one variable per draw so the
+    // choice of what to test carries real weight. A shape reading shows the real
+    // shape icon; a concentration reading instead shows a petri-dish glyph (a dish
+    // rim with a scattered cluster of cells) - dot count (2/4/6 = low/medium/high)
+    // reads as an absolute count, no reference frame needed to judge it.
     public class BloodGlyphView : MonoBehaviour
     {
         [SerializeField] private Image shapeImage;
+        [SerializeField] private GameObject petriDishRoot;
+        [SerializeField] private Image[] cells; // 6 slots, toggled on/off by count
 
-        public void Configure(string testedAttribute, string trueSize, string trueShape)
+        public void Configure(string testedAttribute, string trueConcentration, string trueShape)
         {
-            if (shapeImage == null)
+            bool isConcentration = testedAttribute == "concentration";
+
+            if (shapeImage != null)
+            {
+                shapeImage.gameObject.SetActive(!isConcentration);
+                if (!isConcentration)
+                    shapeImage.sprite = ShapeSpriteLibrary.Instance.Get(ShapeSpriteLibrary.FromName(trueShape));
+            }
+
+            if (petriDishRoot != null)
+                petriDishRoot.SetActive(isConcentration);
+
+            int count = isConcentration ? ConcentrationDotTable.DotCount(trueConcentration) : 0;
+            if (cells == null)
                 return;
-
-            var library = ShapeSpriteLibrary.Instance;
-
-            if (testedAttribute == "shape")
-            {
-                shapeImage.sprite = library.Get(ShapeSpriteLibrary.FromName(trueShape));
-                shapeImage.rectTransform.localScale = Vector3.one * SizeScaleTable.NeutralScale;
-            }
-            else // "size"
-            {
-                shapeImage.sprite = library.Get(ShapeKind.NeutralUnknown);
-                shapeImage.rectTransform.localScale = Vector3.one * SizeScaleTable.Scale(trueSize);
-            }
+            for (int i = 0; i < cells.Length; i++)
+                if (cells[i] != null)
+                    cells[i].gameObject.SetActive(i < count);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Countdown.Runtime
         {
             foreach (var d in codex.diseases)
             {
-                if (d.color == compound.Color && d.size == compound.Size && d.shape == compound.Shape)
+                if (d.color == compound.Color && d.concentration == compound.Concentration && d.shape == compound.Shape)
                     return d;
             }
             return null;
