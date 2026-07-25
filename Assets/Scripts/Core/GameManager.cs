@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Countdown.Data;
 using Countdown.Runtime;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Countdown.Core
 {
@@ -21,6 +22,10 @@ namespace Countdown.Core
         public static GameManager Instance { get; private set; }
 
         [SerializeField] private PlayerController player;
+        [SerializeField] private GameObject triagePanel;
+        [SerializeField] private GameObject bloodTestPanel;
+        [SerializeField] private GameObject synthesisPanel;
+        [SerializeField] private GameObject administerPanel;
 
         public CountdownCodex Codex { get; private set; }
         public GameState State { get; private set; }
@@ -114,12 +119,17 @@ namespace Countdown.Core
             return outcome;
         }
 
-        // Opens a station panel as a modal overlay. Panel show/hide wiring itself is added
-        // once the UI panels exist (Interactable stations step) - this only tracks phase
-        // and locks player movement in the meantime.
+        // Opens a station panel as a modal overlay: shows the matching panel (if built
+        // yet) and locks player movement while it's up. Free-roam phases (GamePhase has
+        // no dedicated panel yet) still lock input so callers can rely on it uniformly.
         public void OpenPanel(GamePhase phase)
         {
             CurrentPhase = phase;
+            SetPanelActive(triagePanel, phase == GamePhase.Triage);
+            SetPanelActive(bloodTestPanel, phase == GamePhase.BloodTest);
+            SetPanelActive(synthesisPanel, phase == GamePhase.Synthesis);
+            SetPanelActive(administerPanel, phase == GamePhase.Administer);
+
             if (player != null)
                 player.SetInputEnabled(false);
         }
@@ -127,8 +137,26 @@ namespace Countdown.Core
         public void ClosePanel()
         {
             CurrentPhase = GamePhase.Boot;
+            SetPanelActive(triagePanel, false);
+            SetPanelActive(bloodTestPanel, false);
+            SetPanelActive(synthesisPanel, false);
+            SetPanelActive(administerPanel, false);
+
             if (player != null)
                 player.SetInputEnabled(true);
+        }
+
+        private static void SetPanelActive(GameObject panel, bool active)
+        {
+            if (panel != null)
+                panel.SetActive(active);
+        }
+
+        private void Update()
+        {
+            bool panelOpen = CurrentPhase != GamePhase.Boot && CurrentPhase != GamePhase.GameOverWin && CurrentPhase != GamePhase.GameOverLose;
+            if (panelOpen && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+                ClosePanel();
         }
     }
 }

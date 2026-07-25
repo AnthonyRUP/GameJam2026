@@ -72,6 +72,7 @@
     <Compile Include="Assets/Scripts/Runtime/GameState.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ProceduralShapeFactory.cs" />
     <Compile Include="Assets/Scripts/Core/GameManager.cs" />
+    <Compile Include="Assets/Scripts/UI/Triage/PatientCloseUpAnimator.cs" />
     <Compile Include="Assets/Scripts/Runtime/ShortlistCalculator.cs" />
     <Compile Include="Assets/Scripts/World/MonitorDisplay.cs" />
     <Compile Include="Assets/Scripts/UI/BloodTest/BloodGlyphView.cs" />

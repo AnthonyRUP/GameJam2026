@@ -1,0 +1,846 @@
+fileFormatVersion: 2
+guid: 224e9c06aa4cc451da48a936e6d243fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1454746177705880366
+    second: CloseUpCharacterLumps_0
+  - first:
+      213: -4931996462869413528
+    second: CloseUpCharacterLumps_1
+  - first:
+      213: -2006227885459700373
+    second: CloseUpCharacterLumps_2
+  - first:
+      213: -655394526809351657
+    second: CloseUpCharacterLumps_3
+  - first:
+      213: 1662108173711513669
+    second: CloseUpCharacterLumps_4
+  - first:
+      213: -6708457658020157471
+    second: CloseUpCharacterLumps_5
+  - first:
+      213: 8617042007722755439
+    second: CloseUpCharacterLumps_6
+  - first:
+      213: 3823262257043288778
+    second: CloseUpCharacterLumps_7
+  - first:
+      213: -2802962130500899802
+    second: CloseUpCharacterLumps_8
+  - first:
+      213: 8163014891930233472
+    second: CloseUpCharacterLumps_9
+  - first:
+      213: 7873489940288741233
+    second: CloseUpCharacterLumps_10
+  - first:
+      213: 1948785436095987893
+    second: CloseUpCharacterLumps_11
+  - first:
+      213: -6052941180003441160
+    second: CloseUpCharacterLumps_12
+  - first:
+      213: -4856122091066836650
+    second: CloseUpCharacterLumps_13
+  - first:
+      213: -2107864929631843655
+    second: CloseUpCharacterLumps_14
+  - first:
+      213: 8397201342785644164
+    second: CloseUpCharacterLumps_15
+  - first:
+      213: -3019054448772043847
+    second: CloseUpCharacterLumps_16
+  - first:
+      213: -4160658239887802678
+    second: CloseUpCharacterLumps_17
+  - first:
+      213: -308245556255711314
+    second: CloseUpCharacterLumps_18
+  - first:
+      213: -1693069243936579840
+    second: CloseUpCharacterLumps_19
+  - first:
+      213: -3594554198555515309
+    second: CloseUpCharacterLumps_20
+  - first:
+      213: -7518969299559346257
+    second: CloseUpCharacterLumps_21
+  - first:
+      213: -3814147720749504707
+    second: CloseUpCharacterLumps_22
+  - first:
+      213: -3626826137155884246
+    second: CloseUpCharacterLumps_23
+  - first:
+      213: 8954990609341921364
+    second: CloseUpCharacterLumps_24
+  - first:
+      213: -950570447636462191
+    second: CloseUpCharacterLumps_25
+  - first:
+      213: 8434188807890036596
+    second: CloseUpCharacterLumps_26
+  - first:
+      213: -4047315234490919728
+    second: CloseUpCharacterLumps_27
+  - first:
+      213: 3635933002917870882
+    second: CloseUpCharacterLumps_28
+  - first:
+      213: 6019656539187908403
+    second: CloseUpCharacterLumps_29
+  - first:
+      213: -9180276277925041087
+    second: CloseUpCharacterLumps_30
+  - first:
+      213: 2418145226498903233
+    second: CloseUpCharacterLumps_31
+  - first:
+      213: -5393229128460941738
+    second: CloseUpCharacterLumps_32
+  - first:
+      213: -5709753790665540510
+    second: CloseUpCharacterLumps_33
+  - first:
+      213: 6856238609475288416
+    second: CloseUpCharacterLumps_34
+  - first:
+      213: -422872268569864147
+    second: CloseUpCharacterLumps_35
+  - first:
+      213: -2465250248162541680
+    second: CloseUpCharacterLumps_36
+  - first:
+      213: 8117208037894852783
+    second: CloseUpCharacterLumps_37
+  - first:
+      213: 1344693877384070432
+    second: CloseUpCharacterLumps_38
+  - first:
+      213: 8173544329216111799
+    second: CloseUpCharacterLumps_39
+  - first:
+      213: 7770512549655721200
+    second: CloseUpCharacterLumps_40
+  - first:
+      213: 6948020481707913172
+    second: CloseUpCharacterLumps_41
+  - first:
+      213: 4600671648442415490
+    second: CloseUpCharacterLumps_42
+  - first:
+      213: 2681432913193999460
+    second: CloseUpCharacterLumps_43
+  - first:
+      213: -3960861073247151812
+    second: CloseUpCharacterLumps_44
+  - first:
+      213: -3306836657712754578
+    second: CloseUpCharacterLumps_45
+  - first:
+      213: 8889989268220262194
+    second: CloseUpCharacterLumps_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc3dcaf433b04cd282c6c9110420e07
+      internalID: -1454746177705880366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a614ca0ea41da435d891581ae70cabee
+      internalID: -4931996462869413528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608e4205560db4f4abcd899cab7b832f
+      internalID: -2006227885459700373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d35eab94d3444eda9a1f9aebb928241
+      internalID: -655394526809351657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beeb4f3eef6c41929c1ac459c0eb74d
+      internalID: 1662108173711513669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aabb228364c142309f966725be162ba
+      internalID: -6708457658020157471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d1fcae62fbd4e099982e11f0f4fe79
+      internalID: 8617042007722755439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7560fc030c84de78d3b8009c87110c
+      internalID: 3823262257043288778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab2c4fc245494576853dadc7f61052e
+      internalID: -2802962130500899802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfd5da39941b438eb633507eaec9af0
+      internalID: 8163014891930233472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c24f042cd0724833b3775015d5f4ebc
+      internalID: 7873489940288741233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185e738ebaed9411fadfe1f0bdf8c159
+      internalID: 1948785436095987893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd8ae71a02eb417ab5a8a90edc25ffe
+      internalID: -6052941180003441160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea81880b6b53844ba8c27111ab18a097
+      internalID: -4856122091066836650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c2e9563e0054c87895571e4ef8b88f
+      internalID: -2107864929631843655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7eb8acbc8944cd98ccc9198b5417c6
+      internalID: 8397201342785644164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5519469c820ea41df9695e95747ae36f
+      internalID: -3019054448772043847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d462195c11eb442d88b1ab3a4fe7e50
+      internalID: -4160658239887802678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008dbdaea31604ef4b096bd0c033452e
+      internalID: -308245556255711314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d8d0d16d291427eb05bba0a21ffd71
+      internalID: -1693069243936579840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801077f4806914596bf673f589e6bc7e
+      internalID: -3594554198555515309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0607bf0d26144a968e746b9eda2a15e
+      internalID: -7518969299559346257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6edcf9dc163e47d98d156b0901e03a1
+      internalID: -3814147720749504707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterLumps_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04498596681384cd283ea2798441a085
+      internalID: -3626826137155884246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a4e92d85f8bc04fd7abb9f6c22530d1c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CloseUpCharacterLumps_0: -1454746177705880366
+      CloseUpCharacterLumps_1: -4931996462869413528
+      CloseUpCharacterLumps_10: 7873489940288741233
+      CloseUpCharacterLumps_11: 1948785436095987893
+      CloseUpCharacterLumps_12: -6052941180003441160
+      CloseUpCharacterLumps_13: -4856122091066836650
+      CloseUpCharacterLumps_14: -2107864929631843655
+      CloseUpCharacterLumps_15: 8397201342785644164
+      CloseUpCharacterLumps_16: -3019054448772043847
+      CloseUpCharacterLumps_17: -4160658239887802678
+      CloseUpCharacterLumps_18: -308245556255711314
+      CloseUpCharacterLumps_19: -1693069243936579840
+      CloseUpCharacterLumps_2: -2006227885459700373
+      CloseUpCharacterLumps_20: -3594554198555515309
+      CloseUpCharacterLumps_21: -7518969299559346257
+      CloseUpCharacterLumps_22: -3814147720749504707
+      CloseUpCharacterLumps_23: -3626826137155884246
+      CloseUpCharacterLumps_24: 8954990609341921364
+      CloseUpCharacterLumps_25: -950570447636462191
+      CloseUpCharacterLumps_26: 8434188807890036596
+      CloseUpCharacterLumps_27: -4047315234490919728
+      CloseUpCharacterLumps_28: 3635933002917870882
+      CloseUpCharacterLumps_29: 6019656539187908403
+      CloseUpCharacterLumps_3: -655394526809351657
+      CloseUpCharacterLumps_30: -9180276277925041087
+      CloseUpCharacterLumps_31: 2418145226498903233
+      CloseUpCharacterLumps_32: -5393229128460941738
+      CloseUpCharacterLumps_33: -5709753790665540510
+      CloseUpCharacterLumps_34: 6856238609475288416
+      CloseUpCharacterLumps_35: -422872268569864147
+      CloseUpCharacterLumps_36: -2465250248162541680
+      CloseUpCharacterLumps_37: 8117208037894852783
+      CloseUpCharacterLumps_38: 1344693877384070432
+      CloseUpCharacterLumps_39: 8173544329216111799
+      CloseUpCharacterLumps_4: 1662108173711513669
+      CloseUpCharacterLumps_40: 7770512549655721200
+      CloseUpCharacterLumps_41: 6948020481707913172
+      CloseUpCharacterLumps_42: 4600671648442415490
+      CloseUpCharacterLumps_43: 2681432913193999460
+      CloseUpCharacterLumps_44: -3960861073247151812
+      CloseUpCharacterLumps_45: -3306836657712754578
+      CloseUpCharacterLumps_46: 8889989268220262194
+      CloseUpCharacterLumps_5: -6708457658020157471
+      CloseUpCharacterLumps_6: 8617042007722755439
+      CloseUpCharacterLumps_7: 3823262257043288778
+      CloseUpCharacterLumps_8: -2802962130500899802
+      CloseUpCharacterLumps_9: 8163014891930233472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

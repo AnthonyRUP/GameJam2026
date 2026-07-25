@@ -1,0 +1,846 @@
+fileFormatVersion: 2
+guid: 6f8a9135ad39446089b6b385bf7341a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6904331213845975638
+    second: CloseUpCharacterBlueLumps_0
+  - first:
+      213: -3976959269906649769
+    second: CloseUpCharacterBlueLumps_1
+  - first:
+      213: -4601521467920303986
+    second: CloseUpCharacterBlueLumps_2
+  - first:
+      213: -4909069506913469594
+    second: CloseUpCharacterBlueLumps_3
+  - first:
+      213: 1182267635878542505
+    second: CloseUpCharacterBlueLumps_4
+  - first:
+      213: 8548774753394120117
+    second: CloseUpCharacterBlueLumps_5
+  - first:
+      213: 8826909285526276183
+    second: CloseUpCharacterBlueLumps_6
+  - first:
+      213: -7516477840010922689
+    second: CloseUpCharacterBlueLumps_7
+  - first:
+      213: -8475592894280118946
+    second: CloseUpCharacterBlueLumps_8
+  - first:
+      213: -1651473655929045876
+    second: CloseUpCharacterBlueLumps_9
+  - first:
+      213: 6346184642486231850
+    second: CloseUpCharacterBlueLumps_10
+  - first:
+      213: -8402392756685311151
+    second: CloseUpCharacterBlueLumps_11
+  - first:
+      213: -4311580836157892022
+    second: CloseUpCharacterBlueLumps_12
+  - first:
+      213: 218033099179311774
+    second: CloseUpCharacterBlueLumps_13
+  - first:
+      213: -2152243986917810447
+    second: CloseUpCharacterBlueLumps_14
+  - first:
+      213: 497728150023988800
+    second: CloseUpCharacterBlueLumps_15
+  - first:
+      213: 8403988800548241792
+    second: CloseUpCharacterBlueLumps_16
+  - first:
+      213: 4945587006325289974
+    second: CloseUpCharacterBlueLumps_17
+  - first:
+      213: 4196585250672592402
+    second: CloseUpCharacterBlueLumps_18
+  - first:
+      213: 6891689539960037054
+    second: CloseUpCharacterBlueLumps_19
+  - first:
+      213: 7774995921475136698
+    second: CloseUpCharacterBlueLumps_20
+  - first:
+      213: 7032971580478341926
+    second: CloseUpCharacterBlueLumps_21
+  - first:
+      213: -7596650896435047394
+    second: CloseUpCharacterBlueLumps_22
+  - first:
+      213: 704595014109241723
+    second: CloseUpCharacterBlueLumps_23
+  - first:
+      213: 5129392541879583093
+    second: CloseUpCharacterBlueLumps_24
+  - first:
+      213: -1498046921885729232
+    second: CloseUpCharacterBlueLumps_25
+  - first:
+      213: -2635473792626088998
+    second: CloseUpCharacterBlueLumps_26
+  - first:
+      213: -8364694289898921443
+    second: CloseUpCharacterBlueLumps_27
+  - first:
+      213: 6000350321789502541
+    second: CloseUpCharacterBlueLumps_28
+  - first:
+      213: -376116659205853367
+    second: CloseUpCharacterBlueLumps_29
+  - first:
+      213: 4103122014878475054
+    second: CloseUpCharacterBlueLumps_30
+  - first:
+      213: -6926641597922504085
+    second: CloseUpCharacterBlueLumps_31
+  - first:
+      213: -2796836663654268343
+    second: CloseUpCharacterBlueLumps_32
+  - first:
+      213: 5499194953901658306
+    second: CloseUpCharacterBlueLumps_33
+  - first:
+      213: 1633833660866180800
+    second: CloseUpCharacterBlueLumps_34
+  - first:
+      213: -5186401338479062503
+    second: CloseUpCharacterBlueLumps_35
+  - first:
+      213: -3184282896981738307
+    second: CloseUpCharacterBlueLumps_36
+  - first:
+      213: 6544969624771886607
+    second: CloseUpCharacterBlueLumps_37
+  - first:
+      213: 6209993987017320633
+    second: CloseUpCharacterBlueLumps_38
+  - first:
+      213: -4168142029881683808
+    second: CloseUpCharacterBlueLumps_39
+  - first:
+      213: -2114978432184652815
+    second: CloseUpCharacterBlueLumps_40
+  - first:
+      213: 7300748494937749543
+    second: CloseUpCharacterBlueLumps_41
+  - first:
+      213: 4050924317006287161
+    second: CloseUpCharacterBlueLumps_42
+  - first:
+      213: -2052455876840425592
+    second: CloseUpCharacterBlueLumps_43
+  - first:
+      213: -6227996803122401199
+    second: CloseUpCharacterBlueLumps_44
+  - first:
+      213: -4960595849283517236
+    second: CloseUpCharacterBlueLumps_45
+  - first:
+      213: 7426179433774267274
+    second: CloseUpCharacterBlueLumps_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317d6622df5aa451bacafc5a50758d85
+      internalID: 6904331213845975638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33689130f8e434c1cbce5c18d2c07e63
+      internalID: -3976959269906649769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4ff1abb26104d178433f1bccd44aac
+      internalID: -4601521467920303986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13ec690efdf44a7ace0fc8383d1451
+      internalID: -4909069506913469594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ee33f55de5c4896be93abb280f9d4b
+      internalID: 1182267635878542505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6fd43d5ff514bb7aa0e0f51ef11aca
+      internalID: 8548774753394120117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cee1ea7599874f809569a101195c8eb
+      internalID: 8826909285526276183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5aea45a5b054ee2aab084c9358d3ec
+      internalID: -7516477840010922689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9012cc68c0d44879c4ee916cb3d46c
+      internalID: -8475592894280118946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bf797659fd94149bacb310a5fe58e1
+      internalID: -1651473655929045876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a97082cc38841b68628d630225ce02
+      internalID: 6346184642486231850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9901a110775c47bb8c7e98aaebb15e7
+      internalID: -8402392756685311151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e966688069ca34e85bb67593b5b7b301
+      internalID: -4311580836157892022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9376c9d8f1a4492b04faf3c4200dd5
+      internalID: 218033099179311774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f1c547fac7a45d3aeaa21b8774ffcb
+      internalID: -2152243986917810447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc08f271614e342a39ea7c8672c68a12
+      internalID: 497728150023988800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6ccfc5a245c4e2c90d2c6987c86527
+      internalID: 8403988800548241792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f14cf86a8444c9587e07e54e7bb199
+      internalID: 4945587006325289974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e2813195008404a881be4ae091fd87
+      internalID: 4196585250672592402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d700c88818fe64acabf56e9744bb4583
+      internalID: 6891689539960037054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381b32ea7417247e18a1f49749a7e12c
+      internalID: 7774995921475136698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d6d1403485b4045b1672a25db1d228
+      internalID: 7032971580478341926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552880f8a56a141c59fa997a56a19991
+      internalID: -7596650896435047394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloseUpCharacterBlueLumps_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29831ac6e9548462fa76e45648ced55f
+      internalID: 704595014109241723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd0ca56d52930403e99bed0ea4fc1d34
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CloseUpCharacterBlueLumps_0: 6904331213845975638
+      CloseUpCharacterBlueLumps_1: -3976959269906649769
+      CloseUpCharacterBlueLumps_10: 6346184642486231850
+      CloseUpCharacterBlueLumps_11: -8402392756685311151
+      CloseUpCharacterBlueLumps_12: -4311580836157892022
+      CloseUpCharacterBlueLumps_13: 218033099179311774
+      CloseUpCharacterBlueLumps_14: -2152243986917810447
+      CloseUpCharacterBlueLumps_15: 497728150023988800
+      CloseUpCharacterBlueLumps_16: 8403988800548241792
+      CloseUpCharacterBlueLumps_17: 4945587006325289974
+      CloseUpCharacterBlueLumps_18: 4196585250672592402
+      CloseUpCharacterBlueLumps_19: 6891689539960037054
+      CloseUpCharacterBlueLumps_2: -4601521467920303986
+      CloseUpCharacterBlueLumps_20: 7774995921475136698
+      CloseUpCharacterBlueLumps_21: 7032971580478341926
+      CloseUpCharacterBlueLumps_22: -7596650896435047394
+      CloseUpCharacterBlueLumps_23: 704595014109241723
+      CloseUpCharacterBlueLumps_24: 5129392541879583093
+      CloseUpCharacterBlueLumps_25: -1498046921885729232
+      CloseUpCharacterBlueLumps_26: -2635473792626088998
+      CloseUpCharacterBlueLumps_27: -8364694289898921443
+      CloseUpCharacterBlueLumps_28: 6000350321789502541
+      CloseUpCharacterBlueLumps_29: -376116659205853367
+      CloseUpCharacterBlueLumps_3: -4909069506913469594
+      CloseUpCharacterBlueLumps_30: 4103122014878475054
+      CloseUpCharacterBlueLumps_31: -6926641597922504085
+      CloseUpCharacterBlueLumps_32: -2796836663654268343
+      CloseUpCharacterBlueLumps_33: 5499194953901658306
+      CloseUpCharacterBlueLumps_34: 1633833660866180800
+      CloseUpCharacterBlueLumps_35: -5186401338479062503
+      CloseUpCharacterBlueLumps_36: -3184282896981738307
+      CloseUpCharacterBlueLumps_37: 6544969624771886607
+      CloseUpCharacterBlueLumps_38: 6209993987017320633
+      CloseUpCharacterBlueLumps_39: -4168142029881683808
+      CloseUpCharacterBlueLumps_4: 1182267635878542505
+      CloseUpCharacterBlueLumps_40: -2114978432184652815
+      CloseUpCharacterBlueLumps_41: 7300748494937749543
+      CloseUpCharacterBlueLumps_42: 4050924317006287161
+      CloseUpCharacterBlueLumps_43: -2052455876840425592
+      CloseUpCharacterBlueLumps_44: -6227996803122401199
+      CloseUpCharacterBlueLumps_45: -4960595849283517236
+      CloseUpCharacterBlueLumps_46: 7426179433774267274
+      CloseUpCharacterBlueLumps_5: 8548774753394120117
+      CloseUpCharacterBlueLumps_6: 8826909285526276183
+      CloseUpCharacterBlueLumps_7: -7516477840010922689
+      CloseUpCharacterBlueLumps_8: -8475592894280118946
+      CloseUpCharacterBlueLumps_9: -1651473655929045876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
