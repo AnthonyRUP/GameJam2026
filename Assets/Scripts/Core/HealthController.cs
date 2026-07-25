@@ -37,6 +37,9 @@ namespace Countdown.Core
             int shouldBeRevealed = state.Health <= t.T3 ? 3 : state.Health <= t.T2 ? 2 : state.Health <= t.T1 ? 1 : 0;
             if (shouldBeRevealed > state.RevealedSymptomCount)
             {
+                for (int i = state.RevealedSymptomCount; i < shouldBeRevealed; i++)
+                    Debug.Log($"Symptom revealed (T{i + 1}): {state.CurrentDisease.symptoms[i]}");
+
                 state.RevealedSymptomCount = shouldBeRevealed;
                 GameEvents.RaiseSymptomRevealed();
             }

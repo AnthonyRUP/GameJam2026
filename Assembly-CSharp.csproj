@@ -66,6 +66,7 @@
     <Compile Include="Assets/Scripts/World/YSortSpriteRenderer.cs" />
     <Compile Include="Assets/Scripts/Core/GameEvents.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerInventory.cs" />
+    <Compile Include="Assets/Scripts/World/CoughSymptomAudio.cs" />
     <Compile Include="Assets/Scripts/World/RenderBehindSibling.cs" />
     <Compile Include="Assets/Scripts/Data/CodexLoader.cs" />
     <Compile Include="Assets/Scripts/Runtime/AdministerRules.cs" />
