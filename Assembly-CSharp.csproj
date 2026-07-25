@@ -61,6 +61,7 @@
     <Compile Include="Assets/Scripts/Placeholder/ColorPalette.cs" />
     <Compile Include="Assets/Scripts/UI/Monitor/ECGWaveform.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ConcentrationDotTable.cs" />
+    <Compile Include="Assets/Scripts/World/CountdownTimerDisplay.cs" />
     <Compile Include="Assets/Scripts/UI/Common/MatchableItemView.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ShapeSpriteLibrary.cs" />
     <Compile Include="Assets/Scripts/UI/Shelf/ShapeShelfPanel.cs" />
