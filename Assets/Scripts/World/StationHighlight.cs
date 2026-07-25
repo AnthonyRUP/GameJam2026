@@ -21,5 +21,15 @@ namespace Countdown.World
             if (other.CompareTag("Player") && highlightRoot != null)
                 highlightRoot.SetActive(false);
         }
+
+        // Called by Interactable the instant E is pressed, before any interaction
+        // logic runs - once you're actually interacting, "you can interact with
+        // this" is no longer useful information. Re-shows automatically next time
+        // OnTriggerEnter2D fires (e.g. after leaving and re-entering range).
+        public void Hide()
+        {
+            if (highlightRoot != null)
+                highlightRoot.SetActive(false);
+        }
     }
 }

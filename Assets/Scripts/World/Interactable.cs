@@ -15,6 +15,13 @@ namespace Countdown.World
 
         protected bool _playerInRange;
 
+        private StationHighlight _highlight;
+
+        private void Awake()
+        {
+            _highlight = GetComponent<StationHighlight>();
+        }
+
         private void Reset()
         {
             var col = GetComponent<Collider2D>();
@@ -42,7 +49,11 @@ namespace Countdown.World
                 Interact();
         }
 
-        public void Interact() => OnInteract();
+        public void Interact()
+        {
+            _highlight?.Hide();
+            OnInteract();
+        }
 
         protected virtual void OnInteract()
         {
