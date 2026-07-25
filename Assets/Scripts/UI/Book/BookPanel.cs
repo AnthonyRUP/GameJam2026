@@ -13,17 +13,19 @@ namespace Countdown.UI.Book
     // 1&2, then 3&4, then 5&6, etc. Shows the full 14-disease codex regardless of the
     // current playthrough - this is static reference material, not scoped to the
     // shortlist. Per page: name up top (centered), symptoms below it, then the cure
-    // glyph (shape/color/concentration all at once) just below that.
+    // as plain text just below that - a visual glyph (real shape/color/dots) made the
+    // cure trivially pattern-matchable at a glance while flipping pages, undercutting
+    // the symptom-based diagnosis loop, so this is deliberately just words.
     public class BookPanel : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI leftDiseaseNameLabel;
         [SerializeField] private TextMeshProUGUI leftSymptomsLabel;
-        [SerializeField] private CureGlyphView leftCureGlyph;
+        [SerializeField] private TextMeshProUGUI leftReagentsLabel;
         [SerializeField] private TextMeshProUGUI leftPageIndicatorLabel;
 
         [SerializeField] private TextMeshProUGUI rightDiseaseNameLabel;
         [SerializeField] private TextMeshProUGUI rightSymptomsLabel;
-        [SerializeField] private CureGlyphView rightCureGlyph;
+        [SerializeField] private TextMeshProUGUI rightReagentsLabel;
         [SerializeField] private TextMeshProUGUI rightPageIndicatorLabel;
 
         private int _spreadIndex;
@@ -66,11 +68,11 @@ namespace Countdown.UI.Book
             int leftIndex = _spreadIndex * 2;
             int rightIndex = leftIndex + 1;
 
-            SetPage(leftDiseaseNameLabel, leftSymptomsLabel, leftCureGlyph, leftPageIndicatorLabel, diseases, leftIndex);
-            SetPage(rightDiseaseNameLabel, rightSymptomsLabel, rightCureGlyph, rightPageIndicatorLabel, diseases, rightIndex);
+            SetPage(leftDiseaseNameLabel, leftSymptomsLabel, leftReagentsLabel, leftPageIndicatorLabel, diseases, leftIndex);
+            SetPage(rightDiseaseNameLabel, rightSymptomsLabel, rightReagentsLabel, rightPageIndicatorLabel, diseases, rightIndex);
         }
 
-        private static void SetPage(TextMeshProUGUI nameLabel, TextMeshProUGUI symptomsLabel, CureGlyphView cureGlyph,
+        private static void SetPage(TextMeshProUGUI nameLabel, TextMeshProUGUI symptomsLabel, TextMeshProUGUI reagentsLabel,
             TextMeshProUGUI pageLabel, List<DiseaseData> diseases, int index)
         {
             bool valid = index >= 0 && index < diseases.Count;
@@ -82,17 +84,15 @@ namespace Countdown.UI.Book
             if (symptomsLabel != null)
                 symptomsLabel.text = valid ? FormatSymptoms(disease.symptoms) : "";
 
-            if (cureGlyph != null)
-            {
-                if (valid)
-                    cureGlyph.Configure(disease.color, disease.concentration, disease.shape);
-                else
-                    cureGlyph.Clear();
-            }
+            if (reagentsLabel != null)
+                reagentsLabel.text = valid ? FormatReagents(disease.color, disease.concentration, disease.shape) : "";
 
             if (pageLabel != null)
                 pageLabel.text = valid ? $"{index + 1} / {diseases.Count}" : "";
         }
+
+        private static string FormatReagents(string color, string concentration, string shape) =>
+            $"Cure: {Prettify(color)}, {Prettify(concentration)}, {Prettify(shape)}";
 
         private static string FormatSymptoms(string[] symptoms)
         {

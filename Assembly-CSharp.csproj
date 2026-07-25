@@ -58,6 +58,7 @@
     <Compile Include="Assets/Scripts/Data/CountdownCodex.cs" />
     <Compile Include="Assets/Scripts/World/InjectorStation.cs" />
     <Compile Include="Assets/Scripts/Core/HealthController.cs" />
+    <Compile Include="Assets/Scripts/World/MixerStation.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ColorPalette.cs" />
     <Compile Include="Assets/Scripts/UI/Monitor/ECGWaveform.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ConcentrationDotTable.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets/Scripts/Placeholder/ProceduralShapeFactory.cs" />
     <Compile Include="Assets/Scripts/UI/Monitor/MonitorPanel.cs" />
     <Compile Include="Assets/Scripts/Core/GameManager.cs" />
-    <Compile Include="Assets/Scripts/UI/Book/CureGlyphView.cs" />
     <Compile Include="Assets/Scripts/UI/Triage/PatientCloseUpAnimator.cs" />
     <Compile Include="Assets/Scripts/Runtime/ShortlistCalculator.cs" />
     <Compile Include="Assets/Scripts/World/MonitorDisplay.cs" />

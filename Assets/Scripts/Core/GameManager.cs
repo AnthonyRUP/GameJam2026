@@ -94,7 +94,7 @@ namespace Countdown.Core
             RecomputeShortlist();
         }
 
-        // Called by the (not-yet-built) Administer panel when the player injects a compound.
+        // Called by InjectorStation when the player administers a compound.
         // Returns the resolved outcome category so the caller can drive its own UI feedback.
         public string RecordAdministerAttempt(Compound compound)
         {
@@ -109,6 +109,9 @@ namespace Countdown.Core
 
             State.Health = Mathf.Clamp(State.Health + AdministerRules.HealthDeltaFor(outcome), 0f, Codex.mechanics.health_start);
             RecomputeShortlist();
+
+            string administeredName = administeredDisease != null ? administeredDisease.id : "no matching disease";
+            Debug.Log($"Administered [{compound.Color}, {compound.Concentration}, {compound.Shape}] ({administeredName}) vs true disease {State.CurrentDisease.id} -> {outcome.ToUpperInvariant()} (health now {State.Health:F1})");
 
             if (outcome == AdministerRules.Cure)
             {
