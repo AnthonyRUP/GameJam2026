@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c09c51207b004e36a97737d2dc597b2
+guid: eac821a12de2c48cc82e686113ae8444
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1255637322393689108
-    second: OpenBook_0
+      213: -8162013730701317111
+    second: MoniterPanelScreen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OpenBook_0
+      name: MoniterPanelScreen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
-        height: 200
+        width: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce360080284139ee0800000000000000
-      internalID: -1255637322393689108
+      spriteID: 90cefa191c3babe80800000000000000
+      internalID: -8162013730701317111
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OpenBook_0: -1255637322393689108
+      MoniterPanelScreen_0: -8162013730701317111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

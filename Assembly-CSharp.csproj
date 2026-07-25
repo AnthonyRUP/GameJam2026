@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/UI/BloodTest/BloodTestPanel.cs" />
+    <Compile Include="Assets/Scripts/UI/Shelf/DyeShelfPanel.cs" />
+    <Compile Include="Assets/Scripts/World/StationHighlight.cs" />
     <Compile Include="Assets/Scripts/Data/CountdownCodex.cs" />
     <Compile Include="Assets/Scripts/World/InjectorStation.cs" />
     <Compile Include="Assets/Scripts/Core/HealthController.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Assets/Scripts/Placeholder/ConcentrationDotTable.cs" />
     <Compile Include="Assets/Scripts/UI/Common/MatchableItemView.cs" />
     <Compile Include="Assets/Scripts/Placeholder/ShapeSpriteLibrary.cs" />
+    <Compile Include="Assets/Scripts/UI/Shelf/ShapeShelfPanel.cs" />
     <Compile Include="Assets/Scripts/World/Interactable.cs" />
     <Compile Include="Assets/Scripts/Data/SymptomVisualCatalog.cs" />
     <Compile Include="Assets/Scripts/Player/CameraFollow.cs" />

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c09c51207b004e36a97737d2dc597b2
+guid: 43c948f177fbb40d08a3b10494a98e61
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1255637322393689108
-    second: OpenBook_0
+      213: 9170782414370259113
+    second: ShapeShelfHighlight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OpenBook_0
+      name: ShapeShelfHighlight_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
-        height: 200
+        width: 32
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce360080284139ee0800000000000000
-      internalID: -1255637322393689108
+      spriteID: 9a040f8540a254f70800000000000000
+      internalID: 9170782414370259113
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OpenBook_0: -1255637322393689108
+      ShapeShelfHighlight_0: 9170782414370259113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

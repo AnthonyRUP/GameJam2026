@@ -8,7 +8,8 @@ namespace Countdown.Player
     {
         None,
         BloodSample,
-        Compound
+        Compound,
+        Reagent
     }
 
     // Tracks what the scientist is currently carrying - empty hands, a drawn blood
@@ -27,6 +28,8 @@ namespace Countdown.Player
 
         public HeldItemKind Held { get; private set; } = HeldItemKind.None;
         public Compound HeldCompound { get; private set; }
+        public string HeldReagentCategory { get; private set; }
+        public string HeldReagentValue { get; private set; }
 
         private void LateUpdate()
         {
@@ -76,9 +79,33 @@ namespace Countdown.Player
             return true;
         }
 
+        // A single reagent picked up from a shelf (e.g. a color from the DyeShelf),
+        // carried to the Mixer to be combined into a full Compound. Only "color" has
+        // a distinct icon treatment so far - other categories fall back to a neutral
+        // tinted circle until their own shelf is built.
+        public bool SetReagent(string category, string value)
+        {
+            if (Held != HeldItemKind.None)
+                return false;
+
+            Held = HeldItemKind.Reagent;
+            HeldReagentCategory = category;
+            HeldReagentValue = value;
+            if (iconRenderer == null)
+                return true;
+
+            iconRenderer.sprite = ShapeSpriteLibrary.Instance.Get(ShapeKind.Circle);
+            iconRenderer.color = category == "color" ? ColorPalette.Get(value) : Color.gray;
+            iconRenderer.transform.localScale = Vector3.one * IconBaseScale;
+            iconRenderer.enabled = true;
+            return true;
+        }
+
         public void Clear()
         {
             Held = HeldItemKind.None;
+            HeldReagentCategory = null;
+            HeldReagentValue = null;
             if (iconRenderer != null)
                 iconRenderer.enabled = false;
         }
