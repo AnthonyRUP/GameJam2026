@@ -12,6 +12,7 @@ namespace Countdown.Core
         Triage,
         BloodTest,
         Monitor,
+        Book,
         Synthesis,
         Administer,
         GameOverWin,
@@ -26,6 +27,7 @@ namespace Countdown.Core
         [SerializeField] private GameObject triagePanel;
         [SerializeField] private GameObject bloodTestPanel;
         [SerializeField] private GameObject monitorPanel;
+        [SerializeField] private GameObject bookPanel;
         [SerializeField] private GameObject synthesisPanel;
         [SerializeField] private GameObject administerPanel;
 
@@ -130,6 +132,7 @@ namespace Countdown.Core
             SetPanelActive(triagePanel, phase == GamePhase.Triage);
             SetPanelActive(bloodTestPanel, phase == GamePhase.BloodTest);
             SetPanelActive(monitorPanel, phase == GamePhase.Monitor);
+            SetPanelActive(bookPanel, phase == GamePhase.Book);
             SetPanelActive(synthesisPanel, phase == GamePhase.Synthesis);
             SetPanelActive(administerPanel, phase == GamePhase.Administer);
 
@@ -143,6 +146,7 @@ namespace Countdown.Core
             SetPanelActive(triagePanel, false);
             SetPanelActive(bloodTestPanel, false);
             SetPanelActive(monitorPanel, false);
+            SetPanelActive(bookPanel, false);
             SetPanelActive(synthesisPanel, false);
             SetPanelActive(administerPanel, false);
 

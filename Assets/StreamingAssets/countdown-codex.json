@@ -8,7 +8,7 @@
     },
     {
       "id": "marsh_ague", "name": "Marsh Ague", "tier": "A",
-      "symptoms": ["fever", "chills", "nausea"],
+      "symptoms": ["fever", "swelling", "nausea"],
       "color": "amber", "concentration": "high", "shape": "diamond",
       "reagents_required": ["amber", "high", "diamond"]
     },

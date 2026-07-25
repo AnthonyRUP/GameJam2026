@@ -52,6 +52,44 @@ namespace Countdown.Placeholder
             return Sprite.Create(tex, new Rect(0, 0, px, px), new Vector2(0.5f, 0.5f), px);
         }
 
+        // Shape membership test in RectTransform-style normalized coordinates
+        // (-0.5..0.5, y positive = up), for placing content (e.g. concentration dots)
+        // that must stay strictly inside a given shape's silhouette regardless of
+        // which of the 4 real shapes it turns out to be - a triangle or diamond
+        // leaves much less usable area near the bounding box's edges than a circle.
+        public static bool Contains(ShapeKind kind, float uiX, float uiY)
+        {
+            float cx = uiX;
+            float cyInternal = -uiY; // InShape's cy convention: positive = toward visual bottom
+            float fy = 0.5f - uiY;   // InShape's fy convention: 0 = top, 1 = bottom
+            const float margin = 0.08f;
+
+            switch (kind)
+            {
+                case ShapeKind.Circle:
+                    return (cx * cx + cyInternal * cyInternal) <= (0.5f - margin) * (0.5f - margin);
+
+                case ShapeKind.Square:
+                    return Mathf.Abs(cx) <= 0.5f - margin && Mathf.Abs(cyInternal) <= 0.5f - margin;
+
+                case ShapeKind.Diamond:
+                    return (Mathf.Abs(cx) + Mathf.Abs(cyInternal)) <= 0.5f - margin;
+
+                case ShapeKind.Triangle:
+                {
+                    float top = margin;
+                    float bottom = 1f - margin;
+                    if (fy < top || fy > bottom) return false;
+                    float t = (fy - top) / (bottom - top);
+                    float halfWidth = t * (0.5f - margin);
+                    return Mathf.Abs(cx) <= halfWidth;
+                }
+
+                default:
+                    return true;
+            }
+        }
+
         public static Sprite Create(ShapeKind kind, int px = 64)
         {
             var tex = new Texture2D(px, px, TextureFormat.RGBA32, false)
