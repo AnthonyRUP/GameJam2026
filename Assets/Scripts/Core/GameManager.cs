@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Countdown.Data;
 using Countdown.Runtime;
 using Countdown.UI.Common;
+using Countdown.UI.Tutorial;
 using Countdown.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +13,7 @@ namespace Countdown.Core
     public enum GamePhase
     {
         Boot,
+        Tutorial,
         Triage,
         BloodTest,
         Monitor,
@@ -37,6 +39,8 @@ namespace Countdown.Core
         [SerializeField] private GameObject shapeShelfPanel;
         [SerializeField] private GameObject synthesisPanel;
         [SerializeField] private GameObject administerPanel;
+        [Tooltip("One-shot boot walkthrough shown before the first patient loads. Optional - if unassigned, the game just starts immediately.")]
+        [SerializeField] private TutorialPanel tutorialPanel;
 
         [Header("Patient transition")]
         [Tooltip("The test tank's doors - closes, patient swaps while hidden, then opens. Left unassigned, patients just swap instantly with no animation.")]
@@ -80,7 +84,18 @@ namespace Countdown.Core
         {
             Codex = codex;
             Debug.Log($"Countdown codex loaded: {codex.diseases.Count} diseases.");
-            StartNewPlaythrough();
+
+            if (tutorialPanel != null)
+            {
+                CurrentPhase = GamePhase.Tutorial;
+                if (player != null)
+                    player.SetInputEnabled(false);
+                tutorialPanel.Show(StartNewPlaythrough);
+            }
+            else
+            {
+                StartNewPlaythrough();
+            }
         }
 
         public void StartNewPlaythrough()
@@ -253,7 +268,8 @@ namespace Countdown.Core
 
         private void Update()
         {
-            bool panelOpen = CurrentPhase != GamePhase.Boot && CurrentPhase != GamePhase.GameOverWin && CurrentPhase != GamePhase.GameOverLose;
+            bool panelOpen = CurrentPhase != GamePhase.Boot && CurrentPhase != GamePhase.Tutorial
+                && CurrentPhase != GamePhase.GameOverWin && CurrentPhase != GamePhase.GameOverLose;
             if (panelOpen && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
                 ClosePanel();
         }
