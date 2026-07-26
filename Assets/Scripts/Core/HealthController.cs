@@ -25,9 +25,7 @@ namespace Countdown.Core
             if (state.Health <= 0f)
             {
                 state.Health = 0f;
-                state.IsGameOver = true;
-                GameEvents.RaiseGameOver();
-                gm.OpenPanel(GamePhase.GameOverLose);
+                gm.HandleLose();
             }
         }
 

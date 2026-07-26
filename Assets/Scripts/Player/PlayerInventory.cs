@@ -36,6 +36,8 @@ namespace Countdown.Player
         [SerializeField] private Vector3 iconLocalOffset = new(0.28f, 0.05f, 0f);
         [SerializeField] private Sprite[] itemSprites; // 12 frames from Items-Sheet, in sheet order
         [SerializeField] private Sprite bloodSampleSprite; // optional dedicated art; falls back to tinted circle if unset
+        [Tooltip("The scientist's bare-hands visual layer (own SpriteRenderer + Animator, playing e.g. Idle_Hands/Walk_Hands). Shown only while Held == None - once carrying something, the item icon replaces the hands entirely.")]
+        [SerializeField] private GameObject handsRoot;
 
         public HeldItemKind Held { get; private set; } = HeldItemKind.None;
         public Compound HeldCompound { get; private set; }
@@ -63,6 +65,7 @@ namespace Countdown.Player
                 return false;
 
             Held = HeldItemKind.BloodSample;
+            UpdateHandsVisibility();
             if (iconRenderer == null)
                 return true;
 
@@ -88,6 +91,7 @@ namespace Countdown.Player
 
             Held = HeldItemKind.Compound;
             HeldCompound = compound;
+            UpdateHandsVisibility();
             ShowItemSprite(SerumFrame);
             return true;
         }
@@ -102,6 +106,7 @@ namespace Countdown.Player
             Held = HeldItemKind.Reagent;
             HeldReagentCategory = category;
             HeldReagentValue = value;
+            UpdateHandsVisibility();
             ShowItemSprite(FrameFor(category, value));
             return true;
         }
@@ -142,11 +147,18 @@ namespace Countdown.Player
             _ => ConcentrationFrame
         };
 
+        private void UpdateHandsVisibility()
+        {
+            if (handsRoot != null)
+                handsRoot.SetActive(Held == HeldItemKind.None);
+        }
+
         public void Clear()
         {
             Held = HeldItemKind.None;
             HeldReagentCategory = null;
             HeldReagentValue = null;
+            UpdateHandsVisibility();
             if (iconRenderer != null)
                 iconRenderer.enabled = false;
         }

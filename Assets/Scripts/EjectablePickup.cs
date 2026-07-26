@@ -5,11 +5,12 @@ using UnityEngine;
 namespace Countdown.World
 {
     // Shared behavior for anything that pops out of a machine with a single hop and
-    // can only be picked up once it's settled (BloodSamplePickup, CompoundPickup).
-    // Subclasses just say what "successfully collected" means for them - the
-    // eject animation, settle-gating, and collider safety are all handled here once.
+    // can only be picked up (or highlighted/selected as ActiveInteractable) once it's
+    // settled (BloodSamplePickup, CompoundPickup). Subclasses just say what
+    // "successfully collected" means for them - the eject animation, settle-gating,
+    // and collider safety are all handled here once.
     [RequireComponent(typeof(Collider2D))]
-    public abstract class EjectablePickup : Interactable, ISettleGate
+    public abstract class EjectablePickup : Interactable
     {
         [Header("Eject pop")]
         [Tooltip("The child transform holding the SpriteRenderer - this is what arcs upward. Leave unset to skip the arc (root still slides to its resting spot).")]
@@ -25,7 +26,9 @@ namespace Countdown.World
 
         private bool _landed;
 
-        public bool HasSettled => _landed;
+        // Not eligible to be the ActiveInteractable (highlighted/interactable) until
+        // it's actually finished hopping into place.
+        public override bool CanBeActive => _landed;
 
         private void Awake()
         {

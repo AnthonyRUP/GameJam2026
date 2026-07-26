@@ -5,6 +5,7 @@
       "symptoms": ["fever", "rash", "rapid_pulse"],
       "color": "crimson", "concentration": "low", "shape": "triangle",
       "reagents_required": ["crimson", "low", "triangle"]
+	
     },
     {
       "id": "marsh_ague", "name": "Marsh Ague", "tier": "A",

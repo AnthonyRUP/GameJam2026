@@ -37,5 +37,24 @@ namespace Countdown.UI.BloodTest
                 if (cells[i] != null)
                     cells[i].gameObject.SetActive(i < count);
         }
+
+        // Explicitly turns everything off - unlike relying on the parent GameObject
+        // being deactivated (which only hides children that are actually nested
+        // under it), this guarantees petriDishRoot/shapeImage/cells all turn off
+        // regardless of hierarchy structure.
+        public void Hide()
+        {
+            if (shapeImage != null)
+                shapeImage.gameObject.SetActive(false);
+
+            if (petriDishRoot != null)
+                petriDishRoot.SetActive(false);
+
+            if (cells == null)
+                return;
+            for (int i = 0; i < cells.Length; i++)
+                if (cells[i] != null)
+                    cells[i].gameObject.SetActive(false);
+        }
     }
 }

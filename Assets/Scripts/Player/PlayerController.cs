@@ -4,6 +4,11 @@ using UnityEngine;
 /// Reads movement from the generated InputSystem_Actions wrapper (Player/Move action)
 /// and drives a Rigidbody2D via MovePosition. Flips the sprite horizontally based on
 /// movement direction so a single-direction walk-cycle sheet can be reused for left/right.
+/// Also drives a second, optional "hands" Animator (a child object holding the
+/// scientist's bare-hands sprite/animation) with the same Speed parameter, so its
+/// Idle_Hands/Walk_Hands clips stay perfectly in sync with the body's Idle/Walk -
+/// PlayerInventory is what actually shows/hides the hands GameObject based on
+/// whether something's being carried.
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -11,6 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
+    [Tooltip("Optional - the hands' own Animator (on the child hands object PlayerInventory toggles). Driven with the same Speed parameter and flip so it stays in sync with the body.")]
+    [SerializeField] private Animator handsAnimator;
+    [Tooltip("Optional - the hands' own SpriteRenderer, flipped to match the body's facing direction.")]
+    [SerializeField] private SpriteRenderer handsRenderer;
 
     private static readonly int SpeedParam = Animator.StringToHash("Speed");
 
@@ -54,11 +63,16 @@ public class PlayerController : MonoBehaviour
         if (_moveInput.sqrMagnitude > 1f)
             _moveInput.Normalize();
 
+        bool facingLeft = _moveInput.x < 0f;
         if (spriteRenderer != null && Mathf.Abs(_moveInput.x) > 0.01f)
-            spriteRenderer.flipX = _moveInput.x < 0f;
+            spriteRenderer.flipX = facingLeft;
+        if (handsRenderer != null && Mathf.Abs(_moveInput.x) > 0.01f)
+            handsRenderer.flipX = facingLeft;
 
         if (animator != null)
             animator.SetFloat(SpeedParam, _moveInput.sqrMagnitude);
+        if (handsAnimator != null)
+            handsAnimator.SetFloat(SpeedParam, _moveInput.sqrMagnitude);
     }
 
     private void FixedUpdate()

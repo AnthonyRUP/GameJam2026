@@ -2,58 +2,38 @@ using UnityEngine;
 
 namespace Countdown.World
 {
-    // Shows a highlighted overlay sprite while the player is within the station's
-    // existing interaction-range trigger - a purely visual "you can interact with
-    // this" affordance, independent of Interactable's own E-key/panel-opening logic
-    // (a separate component listening on the same collider, not a replacement for it).
-    // If the object also implements ISettleGate (e.g. a vial still mid-hop), the
-    // highlight waits until it reports settled before appearing - otherwise it looks
-    // like you can interact with something that's still animating into place.
+    // Shows a highlighted overlay sprite only while this GameObject's Interactable is
+    // the current ActiveInteractable per NearestInteractableSelector - i.e. only the
+    // single closest in-range station gets highlighted, never two at once, and it's
+    // always the same one you're actually able to interact with. Purely visual;
+    // independent of Interactable's own E-key/panel-opening logic.
     public class StationHighlight : MonoBehaviour
     {
         [SerializeField] private GameObject highlightRoot;
 
-        private ISettleGate _settleGate;
-        private bool _playerInRange;
+        private Interactable _interactable;
 
         private void Awake()
         {
-            _settleGate = GetComponent<ISettleGate>();
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (!other.CompareTag("Player")) return;
-            _playerInRange = true;
-            RefreshVisibility();
-        }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (!other.CompareTag("Player")) return;
-            _playerInRange = false;
-            RefreshVisibility();
+            _interactable = GetComponent<Interactable>();
         }
 
         private void Update()
         {
-            // Only need to keep polling while the player's actually in range and
-            // something might still settle later - avoids per-frame work otherwise.
-            if (_playerInRange && _settleGate != null && !_settleGate.HasSettled)
-                RefreshVisibility();
-        }
+            bool shouldShow = _interactable != null
+                && !_interactable.IsSuppressedUntilReentry
+                && NearestInteractableSelector.Instance != null
+                && NearestInteractableSelector.Instance.ActiveInteractable == _interactable;
 
-        private void RefreshVisibility()
-        {
-            if (highlightRoot == null) return;
-            bool settled = _settleGate == null || _settleGate.HasSettled;
-            highlightRoot.SetActive(_playerInRange && settled);
+            if (highlightRoot != null)
+                highlightRoot.SetActive(shouldShow);
         }
 
         // Called by Interactable the instant E is pressed, before any interaction
         // logic runs - once you're actually interacting, "you can interact with
-        // this" is no longer useful information. Re-shows automatically next time
-        // OnTriggerEnter2D fires (e.g. after leaving and re-entering range).
+        // this" is no longer useful information. Re-shows automatically once this
+        // becomes the ActiveInteractable again (e.g. after leaving and re-entering
+        // range, or the previous active station stops being eligible).
         public void Hide()
         {
             if (highlightRoot != null)
