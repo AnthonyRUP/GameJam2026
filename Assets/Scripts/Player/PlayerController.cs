@@ -84,6 +84,10 @@ public class PlayerController : MonoBehaviour
         _rb.MovePosition(nextPosition);
     }
 
+    // Read by ScientistHelpPanel - any movement input closes the help popup, same
+    // as pressing Escape closes a phase panel.
+    public bool IsMoving => _moveInput.sqrMagnitude > 0.0001f;
+
     /// <summary>
     /// Enables/disables player movement input. Wired up later once UI panels exist
     /// (e.g. dialogue/pause screens should call SetInputEnabled(false)).

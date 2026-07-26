@@ -15,6 +15,8 @@ namespace Countdown.World
     {
         [SerializeField] private GamePhase phaseToOpen;
         [SerializeField] private GameObject promptRoot; // shown when player is in range, optional
+        [TextArea]
+        [SerializeField] private string helpDescription; // shown on ScientistHelpPanel when this is the ActiveInteractable and the player presses H
 
         protected bool _playerInRange;
         private bool _suppressedUntilReentry; // true right after Interact() - blocks re-triggering and hides the highlight until the player leaves and re-enters range
@@ -29,6 +31,10 @@ namespace Countdown.World
         // highlight stays hidden while suppressed (e.g. so it doesn't sit on top of
         // and block view of the interaction's own animation).
         public bool IsSuppressedUntilReentry => _suppressedUntilReentry;
+
+        // Read by ScientistHelpPanel - the short "what is this station" blurb shown
+        // bottom-right of the player when they press H while this is the ActiveInteractable.
+        public string HelpDescription => helpDescription;
 
         private void Awake()
         {
