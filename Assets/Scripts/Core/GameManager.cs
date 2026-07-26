@@ -37,6 +37,7 @@ namespace Countdown.Core
         [SerializeField] private GameObject shapeShelfPanel;
         [SerializeField] private GameObject synthesisPanel;
         [SerializeField] private GameObject administerPanel;
+        [SerializeField] private GameObject gameOverPanel;
 
         [Header("Patient transition")]
         [Tooltip("The test tank's doors - closes, patient swaps while hidden, then opens. Left unassigned, patients just swap instantly with no animation.")]
@@ -51,6 +52,10 @@ namespace Countdown.Core
         [Header("Difficulty progression")]
         [Tooltip("How many patients must be cured before the next tier (A -> B -> C) becomes possible to draw. Once unlocked, a tier stays in the pool alongside easier ones - it doesn't replace them.")]
         [SerializeField] private int patientsPerTierUnlock = 3;
+
+        [Header("Game over")]
+        [Tooltip("Seconds to wait after death (player already frozen, doors already closing) before the Game Over panel actually appears.")]
+        [SerializeField] private float gameOverPanelDelaySeconds = 3f;
 
         private static readonly string[] TierOrder = { "A", "B", "C" };
 
@@ -86,6 +91,7 @@ namespace Countdown.Core
         public void StartNewPlaythrough()
         {
             PatientsCured = 0;
+            transitionDoors?.ResetImmediately();
             BeginNextPatient();
         }
 
@@ -196,7 +202,9 @@ namespace Countdown.Core
 
         // Single source of truth for "the patient died" - called both when a bad
         // compound finishes them off (here) and when the health countdown simply
-        // runs out (HealthController). Guards against double-triggering.
+        // runs out (HealthController). Guards against double-triggering. Player
+        // input freezes and the doors start closing immediately; only the panel
+        // itself is delayed, so the moment of death still feels instant.
         public void HandleLose()
         {
             if (State.IsGameOver)
@@ -204,10 +212,20 @@ namespace Countdown.Core
 
             State.IsGameOver = true;
             GameEvents.RaiseGameOver();
-            OpenPanel(GamePhase.GameOverLose);
+
+            if (player != null)
+                player.SetInputEnabled(false);
 
             if (transitionDoors != null)
                 StartCoroutine(transitionDoors.PlayFinalClose());
+
+            StartCoroutine(ShowGameOverPanelAfterDelay());
+        }
+
+        private IEnumerator ShowGameOverPanelAfterDelay()
+        {
+            yield return new WaitForSeconds(gameOverPanelDelaySeconds);
+            OpenPanel(GamePhase.GameOverLose);
         }
 
         // Opens a station panel as a modal overlay: shows the matching panel (if built
@@ -224,6 +242,7 @@ namespace Countdown.Core
             SetPanelActive(shapeShelfPanel, phase == GamePhase.ShapeShelf);
             SetPanelActive(synthesisPanel, phase == GamePhase.Synthesis);
             SetPanelActive(administerPanel, phase == GamePhase.Administer);
+            SetPanelActive(gameOverPanel, phase == GamePhase.GameOverLose);
 
             if (player != null)
                 player.SetInputEnabled(false);
@@ -240,6 +259,7 @@ namespace Countdown.Core
             SetPanelActive(shapeShelfPanel, false);
             SetPanelActive(synthesisPanel, false);
             SetPanelActive(administerPanel, false);
+            SetPanelActive(gameOverPanel, false);
 
             if (player != null)
                 player.SetInputEnabled(true);

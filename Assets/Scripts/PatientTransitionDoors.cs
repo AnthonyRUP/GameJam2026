@@ -89,5 +89,14 @@ namespace Countdown.World
             yield return new WaitForSeconds(closeFinalAnimationSeconds);
             // Intentionally stays active and closed - no further action.
         }
+
+        // Instantly hides the doors with no animation - used when restarting after
+        // a death, since PlayFinalClose otherwise leaves them permanently active
+        // and closed. Not used for the normal patient-swap transition, which
+        // already deactivates itself at the right moment on its own.
+        public void ResetImmediately()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

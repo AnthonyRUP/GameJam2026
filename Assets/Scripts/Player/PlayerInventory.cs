@@ -36,8 +36,8 @@ namespace Countdown.Player
         [SerializeField] private Vector3 iconLocalOffset = new(0.28f, 0.05f, 0f);
         [SerializeField] private Sprite[] itemSprites; // 12 frames from Items-Sheet, in sheet order
         [SerializeField] private Sprite bloodSampleSprite; // optional dedicated art; falls back to tinted circle if unset
-        [Tooltip("The scientist's bare-hands visual layer (own SpriteRenderer + Animator, playing e.g. Idle_Hands/Walk_Hands). Shown only while Held == None - once carrying something, the item icon replaces the hands entirely.")]
-        [SerializeField] private GameObject handsRoot;
+        [Tooltip("The scientist's bare-hands SpriteRenderer. Its GameObject/Animator stay active at all times - only this renderer's 'enabled' toggles - so the hands' Idle_Hands/Walk_Hands animation never resets and stays perfectly in sync with the body. Shown only while Held == None; once carrying something, the item icon replaces the hands visually.")]
+        [SerializeField] private SpriteRenderer handsRenderer;
 
         public HeldItemKind Held { get; private set; } = HeldItemKind.None;
         public Compound HeldCompound { get; private set; }
@@ -55,14 +55,14 @@ namespace Countdown.Player
             iconRenderer.transform.localPosition = offset;
         }
 
-        // The scientist only ever has two hands and one job: these return false and
-        // change nothing if he's already carrying something, so every station that
-        // hands him an item enforces "one item at a time" for free rather than each
-        // needing to remember the check.
+        // Picking up something new always replaces whatever's currently held - the
+        // old item isn't a physical object anywhere, it's just these fields, so
+        // overwriting them here is exactly what "deleting the old one" means.
         public bool SetBloodSample()
         {
-            if (Held != HeldItemKind.None)
-                return false;
+            HeldReagentCategory = null;
+            HeldReagentValue = null;
+            HeldCompound = default;
 
             Held = HeldItemKind.BloodSample;
             UpdateHandsVisibility();
@@ -86,8 +86,8 @@ namespace Countdown.Player
 
         public bool SetCompound(Compound compound)
         {
-            if (Held != HeldItemKind.None)
-                return false;
+            HeldReagentCategory = null;
+            HeldReagentValue = null;
 
             Held = HeldItemKind.Compound;
             HeldCompound = compound;
@@ -100,8 +100,7 @@ namespace Countdown.Player
         // combined into a full Compound.
         public bool SetReagent(string category, string value)
         {
-            if (Held != HeldItemKind.None)
-                return false;
+            HeldCompound = default;
 
             Held = HeldItemKind.Reagent;
             HeldReagentCategory = category;
@@ -149,8 +148,8 @@ namespace Countdown.Player
 
         private void UpdateHandsVisibility()
         {
-            if (handsRoot != null)
-                handsRoot.SetActive(Held == HeldItemKind.None);
+            if (handsRenderer != null)
+                handsRenderer.enabled = Held == HeldItemKind.None;
         }
 
         public void Clear()
