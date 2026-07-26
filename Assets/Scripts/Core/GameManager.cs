@@ -10,10 +10,13 @@ using UnityEngine.InputSystem;
 
 namespace Countdown.Core
 {
+    // Never insert new members in the middle of this enum - Unity serializes each
+    // Interactable.phaseToOpen as a raw int, not a name, so every already-placed
+    // station in the scene would silently point at whatever phase now sits at its
+    // old numeric slot. Always append new phases at the end.
     public enum GamePhase
     {
         Boot,
-        Tutorial,
         Triage,
         BloodTest,
         Monitor,
@@ -23,7 +26,8 @@ namespace Countdown.Core
         Synthesis,
         Administer,
         GameOverWin,
-        GameOverLose
+        GameOverLose,
+        Tutorial
     }
 
     public class GameManager : MonoBehaviour
